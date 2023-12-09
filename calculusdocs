@@ -1,0 +1,22 @@
+Explanation of the Python code:
+Function: find_extrema(f, x)
+
+This function takes a symbolic function f and its independent variable x as input.
+It finds the extrema (minimum or maximum) of the function using the following steps:
+Find the derivative (df): It uses diff from SymPy to differentiate the function.
+Find critical points: It solves the equation df = 0 to get the critical points where the derivative is zero.
+Check defined points: It filters the critical points to include only those where f is defined (returns a finite value).
+Analyze second derivative: It calculates the second derivative d2f and evaluates it at each defined critical point.
+Determine type of extremum:
+If d2f > 0, the point is a minimum.
+If d2f < 0, the point is a maximum.
+If d2f = 0, the test is inconclusive.
+Return results: It constructs a dictionary containing a list of extremum points (x, y) and the overall type of extremum ("minimum" or "maximum").
+Example usage:
+
+The code defines a symbolic variable x and a function f(x) = x^3 - 3x^2 + 4.
+It then calls the find_extrema function with f and x as arguments.
+The function returns a dictionary with the following information:
+extrema: A list containing a single tuple (1, 3), indicating that the function has a minimum at x = 1 and f(1) = 3.
+type: The string "minimum", indicating that the extremum is a minimum.
+Overall, this code demonstrates how to find the extrema of a function using SymPy and calculus principles.
