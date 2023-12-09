@@ -1,0 +1,38 @@
+Explanation of the Python code:
+This code implements a simple Rock-Paper-Scissors game with different AI adversaries.
+
+1. Imports and definitions:
+
+random: Used for randomly choosing AI moves.
+CHOICES: List containing all possible choices in the game.
+AIAdversary: Base class for all AI adversaries.
+choose_move: Abstract method that each concrete AI implementation needs to define.
+2. AI adversary classes:
+
+RandomAI: Chooses a random move from CHOICES.
+PatternMatchingAI:
+Stores the opponent's past memory moves.
+Identifies the opponent's most frequent move and its counter.
+Chooses the counter as its move.
+MinimaxAI: (to be implemented)
+Uses the minimax algorithm to predict the best move based on possible outcomes.
+3. play_game function:
+
+Takes the human player's name and an AI adversary object as input.
+Loops until the player chooses to stop playing.
+Gets the human's move and validates it.
+Gets the AI's move by calling choose_move.
+Determines the winner based on the chosen moves.
+Prints the results of the round.
+Asks the player if they want to play again.
+4. main function:
+
+Gets the player's name and desired AI adversary type.
+Creates an instance of the chosen AI adversary.
+Starts the game by calling play_game.
+5. Execution:
+
+The code starts by running the main function.
+The user enters their name and chooses an AI difficulty.
+The game starts and continues until the user decides to quit.
+Overall, this code demonstrates object-oriented programming with inheritance and abstraction to create different AI adversaries with varying levels of difficulty in the Rock-Paper-Scissors game.
