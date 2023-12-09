@@ -1,4 +1,5 @@
-Explanation of the Python code:
+Explanation of the code:
+
 This code implements the RSA algorithm for encryption and decryption. Here's a breakdown of what each part does:
 
 Importing libraries:
@@ -9,6 +10,7 @@ Function: gcd(a, h)
 This function implements the Euclidean Algorithm to calculate the greatest common divisor (GCD) of two numbers.
 It repeatedly divides the larger number by the smaller one until the remainder is 0.
 The final non-zero remainder is the GCD.
+
 Variable initialization:
 
 p and q: Prime numbers used to generate the RSA key pair.
@@ -36,7 +38,3 @@ Following the same logic as encryption.
 Output:
 
 The code prints the original message, encrypted message, and decrypted message.
-Notes:
-
-This is a simplified implementation of the RSA algorithm and doesn't include key generation or padding schemes used in practical applications.
-It's important to choose large prime numbers for p and q for strong cryptographic security.

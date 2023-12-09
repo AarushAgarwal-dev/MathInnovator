@@ -1,5 +1,6 @@
-Explanation of the Python code:
-This code implements a simple Rock-Paper-Scissors game with different AI adversaries.
+Explanation of the code:
+
+This code implements a  Rock-Paper-Scissors game with different AI adversaries.
 
 1. Imports and definitions:
 
@@ -7,6 +8,7 @@ random: Used for randomly choosing AI moves.
 CHOICES: List containing all possible choices in the game.
 AIAdversary: Base class for all AI adversaries.
 choose_move: Abstract method that each concrete AI implementation needs to define.
+
 2. AI adversary classes:
 
 RandomAI: Chooses a random move from CHOICES.
@@ -16,6 +18,7 @@ Identifies the opponent's most frequent move and its counter.
 Chooses the counter as its move.
 MinimaxAI: (to be implemented)
 Uses the minimax algorithm to predict the best move based on possible outcomes.
+
 3. play_game function:
 
 Takes the human player's name and an AI adversary object as input.
@@ -25,6 +28,7 @@ Gets the AI's move by calling choose_move.
 Determines the winner based on the chosen moves.
 Prints the results of the round.
 Asks the player if they want to play again.
+
 4. main function:
 
 Gets the player's name and desired AI adversary type.
