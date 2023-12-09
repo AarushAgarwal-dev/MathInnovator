@@ -1,0 +1,41 @@
+Explanation of the Python code:
+
+
+Function: hybrid_sort(data)
+
+This function implements a hybrid sorting algorithm that combines Bubble Sort and Quick Sort.
+It checks the length of the input data (data).
+If the length is less than or equal to 10, it uses bubble_sort for its efficiency on small lists.
+If the length is greater than 10, it uses quick_sort for its superior performance on larger lists.
+Finally, it returns the sorted data.
+
+
+Function: bubble_sort(data)
+
+This function implements the Bubble Sort algorithm.
+It creates a copy of the input data (sorted_data).
+It uses a flag (swapped) to track whether any swaps were made during the current iteration.
+It iterates through the data, comparing adjacent elements and swapping them if they are in the wrong order.
+The loop continues until no swaps are made, indicating that the data is sorted.
+Finally, it returns the sorted data (sorted_data).
+
+
+Function: quick_sort(data)
+
+This function implements the Quick Sort algorithm.
+It checks if the length of the input data (data) is less than or equal to 1.
+If it is, the data is already considered sorted and returned as-is.
+It selects the first element (pivot) as the pivot element.
+It partitions the remaining data into two sub-lists:
+left: containing elements less than or equal to the pivot
+right: containing elements greater than the pivot
+It recursively sorts the left and right sub-lists using quick_sort.
+Finally, it combines the sorted sub-lists with the pivot element in the middle and returns the sorted data.
+
+
+Main program:
+
+The program defines a list of unsorted data (unsorted_data).
+It calls the hybrid_sort function with the unsorted data as input.
+It stores the sorted data in a new variable (sorted_data).
+Finally, it prints both the unsorted and sorted data to the console.
