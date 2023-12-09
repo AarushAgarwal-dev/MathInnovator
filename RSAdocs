@@ -1,0 +1,42 @@
+Explanation of the Python code:
+This code implements the RSA algorithm for encryption and decryption. Here's a breakdown of what each part does:
+
+Importing libraries:
+
+math: Used for mathematical operations, including modulo (fmod).
+Function: gcd(a, h)
+
+This function implements the Euclidean Algorithm to calculate the greatest common divisor (GCD) of two numbers.
+It repeatedly divides the larger number by the smaller one until the remainder is 0.
+The final non-zero remainder is the GCD.
+Variable initialization:
+
+p and q: Prime numbers used to generate the RSA key pair.
+n: Modulus, calculated by multiplying p and q.
+e: Public exponent, chosen to be co-prime with phi (Euler's totient function of n).
+phi: Number of integers less than n that are co-prime with n.
+k: An arbitrary integer used to find the private key.
+Finding the public exponent:
+
+The code iterates through values of e between 2 and phi - 1.
+For each value, it checks if the GCD of e and phi is 1 (indicating they are co-prime).
+If a co-prime is found, the loop exits.
+Calculating the private key:
+
+The private key (d) is calculated using the formula d * e = 1 + k * phi.
+The code chooses a value for k (2 in this example) and solves for d.
+Message encryption and decryption:
+
+msg: The message to be encrypted (12.0 in this case).
+c: Encrypted message, calculated as c = pow(msg, e) % n.
+pow: Raises msg to the power of e.
+fmod: Ensures c is within the range of 0 to n-1.
+m: Decrypted message, calculated as m = pow(c, d) % n.
+Following the same logic as encryption.
+Output:
+
+The code prints the original message, encrypted message, and decrypted message.
+Notes:
+
+This is a simplified implementation of the RSA algorithm and doesn't include key generation or padding schemes used in practical applications.
+It's important to choose large prime numbers for p and q for strong cryptographic security.
